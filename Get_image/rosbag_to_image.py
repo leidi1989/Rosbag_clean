@@ -4,7 +4,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2021-12-23 11:08:59
+LastEditTime: 2021-12-23 11:11:36
 '''
 import os
 import cv2
@@ -35,6 +35,8 @@ def main(rosbag_config):
             for topic, msg, t in bag.read_messages():
                 if topic in topic_dict:
                     image_output_path = os.path.join(rosbag_config['image_output_folder'], topic.split('/')[1])
+                    if not os.path.exists(image_output_path):
+                            os.makedirs(image_output_path)
                     topic_dict[topic] += 1
                     if 0 == (topic_dict[topic] % rosbag_config['fps']):
                         cv_image = CvBridge().compressed_imgmsg_to_cv2(msg, "bgr8")
@@ -60,8 +62,8 @@ def main(rosbag_config):
                             cv2.imwrite(os.path.join(image_output_path, image_name), cv_image)
                             topic_image_output_count_dict[topic] += 1
     print('\nTotal topic message create image:')
-    for key, velue in topic_image_output_count_dict.items():
-        print('{:>60}: \t {}'.format(key, velue))
+    for key in rosbag_config['rosbag_topic']:
+        print('{:>60}: \t {}'.format(key, topic_image_output_count_dict[key]))
         
     return
 
