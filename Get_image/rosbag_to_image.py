@@ -5,7 +5,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2021-12-23 11:30:36
+LastEditTime: 2021-12-23 11:35:37
 '''
 import os
 import cv2
@@ -74,7 +74,7 @@ def main(rosbag_config):
         
     return
 
-    
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='rosbag_to_image.py')
     parser.add_argument('--config', '--c', dest='config', default=r'/home/leidi/hy_program/Rosbag_clean/Get_image/config/default.yaml',
