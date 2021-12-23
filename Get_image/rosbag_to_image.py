@@ -4,7 +4,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2021-12-23 11:04:12
+LastEditTime: 2021-12-23 11:08:59
 '''
 import os
 import cv2
@@ -37,7 +37,7 @@ def main(rosbag_config):
                     image_output_path = os.path.join(rosbag_config['image_output_folder'], topic.split('/')[1])
                     topic_dict[topic] += 1
                     if 0 == (topic_dict[topic] % rosbag_config['fps']):
-                        cv_image = bridge.compressed_imgmsg_to_cv2(msg, "bgr8")
+                        cv_image = CvBridge().compressed_imgmsg_to_cv2(msg, "bgr8")
                         image_name = '%.6f.png' % msg.header.stamp.to_sec()
                         print('Create topic message: {:>60} to image: {:>50}'.format(topic, image_name))
                         cv2.imwrite(os.path.join(image_output_path, image_name), cv_image)
@@ -45,7 +45,6 @@ def main(rosbag_config):
     else:
         for filename in os.listdir(rosbag_config['rosbag_folder']):
             rosbag_path = os.path.join(rosbag_config['rosbag_folder'], filename)
-            bridge = CvBridge()
             topic_dict = {x:0 for x in rosbag_config['rosbag_topic']}
             with rosbag.Bag(rosbag_path,'r') as bag:
                 for topic, msg, t in bag.read_messages():
@@ -55,14 +54,14 @@ def main(rosbag_config):
                             os.makedirs(image_output_path)
                         topic_dict[topic] += 1
                         if 0 == (topic_dict[topic] % rosbag_config['fps']):
-                            cv_image = bridge.compressed_imgmsg_to_cv2(msg, "bgr8")
+                            cv_image = CvBridge().compressed_imgmsg_to_cv2(msg, "bgr8")
                             image_name = '%.6f.png' % msg.header.stamp.to_sec()
                             print('Create topic message: {:>60} to image: {:>50}'.format(topic, image_name))
                             cv2.imwrite(os.path.join(image_output_path, image_name), cv_image)
                             topic_image_output_count_dict[topic] += 1
-    print('Total topic message create image:')
+    print('\nTotal topic message create image:')
     for key, velue in topic_image_output_count_dict.items():
-        print('{}: \t {}'.format(key, velue))
+        print('{:>60}: \t {}'.format(key, velue))
         
     return
 
