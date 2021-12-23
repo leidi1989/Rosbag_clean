@@ -4,7 +4,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2021-12-23 11:11:36
+LastEditTime: 2021-12-23 11:17:08
 '''
 import os
 import cv2
@@ -13,11 +13,15 @@ import shutil
 import rosbag
 import argparse
 from cv_bridge import CvBridge
-from cv_bridge import CvBridgeError
 
 
 def main(rosbag_config):
-    
+    """[rosbag message按转指定fps换为image]
+
+    Args:
+        rosbag_config (dict): [rosbag信息字典]
+    """
+
     if not os.path.exists(rosbag_config['image_output_folder']):
         print('Create images folder:')
         os.makedirs(rosbag_config['image_output_folder'])
@@ -29,7 +33,6 @@ def main(rosbag_config):
     print('Start get image:')
     topic_image_output_count_dict = {x:0 for x in rosbag_config['rosbag_topic']}
     if rosbag_config['rosbag_folder'] == None and rosbag_config['rosbag_path'] != None:
-        bridge = CvBridge()
         topic_dict = {x:0 for x in rosbag_config['rosbag_topic']}
         with rosbag.Bag(rosbag_config['rosbag_path'], 'r') as bag:
             for topic, msg, t in bag.read_messages():
@@ -40,7 +43,7 @@ def main(rosbag_config):
                     topic_dict[topic] += 1
                     if 0 == (topic_dict[topic] % rosbag_config['fps']):
                         cv_image = CvBridge().compressed_imgmsg_to_cv2(msg, "bgr8")
-                        image_name = '%.6f.png' % msg.header.stamp.to_sec()
+                        image_name = '{:6f}.png'.format(msg.header.stamp.to_sec())
                         print('Create topic message: {:>60} to image: {:>50}'.format(topic, image_name))
                         cv2.imwrite(os.path.join(image_output_path, image_name), cv_image)
                         topic_image_output_count_dict[topic] += 1
@@ -57,7 +60,7 @@ def main(rosbag_config):
                         topic_dict[topic] += 1
                         if 0 == (topic_dict[topic] % rosbag_config['fps']):
                             cv_image = CvBridge().compressed_imgmsg_to_cv2(msg, "bgr8")
-                            image_name = '%.6f.png' % msg.header.stamp.to_sec()
+                            image_name = '{:6f}.png'.format(msg.header.stamp.to_sec())
                             print('Create topic message: {:>60} to image: {:>50}'.format(topic, image_name))
                             cv2.imwrite(os.path.join(image_output_path, image_name), cv_image)
                             topic_image_output_count_dict[topic] += 1
