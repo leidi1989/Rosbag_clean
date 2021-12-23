@@ -1,28 +1,30 @@
 # rosbag path
-rosbag_path: /mnt/data_1/Data/rosbag/images/qunguang_2021-12-07-11-47-22
+rosbag_path: 
 
 # rosbag folder
-rosbag_folder: ""
+rosbag_folder: /mnt/data_1/Data/rosbag/qunguang/20211220
 
 # image output folder
-image_output_folder: /media/leidi/hy_dataset/Dataset/huawei_dataset_total/hy_segement_dataset_huawei_3217_20210918_20211103
+image_output_folder: /mnt/data_1/Data/rosbag/qunguang/20211220_image_20211223
 
 # every fps collect image
 fps: 15
 
 # topic
-topcic:
+rosbag_topic:
   [
+    /cam_front_center/csi_cam/image_raw/compressed,
+    /cam_front_left/csi_cam/image_raw/compressed,
+    /cam_front_right/csi_cam/image_raw/compressed,
+    /cam_left_front/csi_cam/image_raw/compressed,
+    /cam_right_front/csi_cam/image_raw/compressed,
     /cam_left_back/csi_cam/image_raw/compressed,
     /cam_right_back/csi_cam/image_raw/compressed,
-    /cam_right_front/csi_cam/image_raw/compressed,
-    /cam_left_front/csi_cam/image_raw/compressed,
-    /cam_front_center/csi_cam/image_raw/compressed,
     /cam_back/csi_cam/image_raw/compressed,
-    /cam_right_fish/csi_cam/image_raw/compressed,
     /cam_front_fish/csi_cam/image_raw/compressed,
-    /cam_back_fish/csi_cam/image_raw/compressed,
     /cam_left_fish/csi_cam/image_raw/compressed,
+    /cam_right_fish/csi_cam/image_raw/compressed,
+    /cam_back_fish/csi_cam/image_raw/compressed,
   ]
 
 # progress debug
