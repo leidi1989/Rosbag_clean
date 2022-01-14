@@ -1,22 +1,13 @@
 # rosbag folder
-rosbag_input_folder: 
+rosbag_input_folder: /mnt/data_2/Rosbag/ljp/1209
 
 # rosbag path
 rosbag_input_path_list: [
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_0.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_1.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_2.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_3.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_4.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_5.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_6.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_7.bag,
-  /mnt/data_2/Rosbag/ljp/1121/1121_zhanshi1_2021-11-21-11-56-02_8.bag,
-  ]
   
+  ]
 
 # rosbag path
-rosbag_output_path: /mnt/data_2/Rosbag/parking/zhanshi1_2021-11-21-11-56-02_0.bag
+rosbag_output_path: /mnt/data_2/Rosbag/qunguang1_2_2021-12-09-11-01-17_0.bag
 
 # progress debug
 debug: False

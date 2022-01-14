@@ -4,16 +4,16 @@
 # @Version:
 # @Author: Leidi
 # @Date: 2022-01-14 18:00:41
-# @LastEditors: Leidi
-# @LastEditTime: 2022-01-14 18:25:27
+ # @LastEditors: Leidi
+ # @LastEditTime: 2022-01-14 18:52:18
 ###
-rosbag_path='/mnt/data_2/Rosbag/parking/zhanshi1_2021-11-21-11-56-02_0.bag'
-speed=''
+rosbag_path='/mnt/data_2/Rosbag/qunguang1_2_2021-12-09-11-01-17_0.bag'
+speed='30'
 
 if [$speed == '']; then
     rosbag info $rosbag_path
-    rosbag play $rosbag_path
+    rosbag play $rosbag_path -l
 else
     rosbag info $rosbag_path
-    rosbag play $rosbag_path -r $speed
+    rosbag play $rosbag_path -r $speed -l
 fi
