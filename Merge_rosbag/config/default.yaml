@@ -1,11 +1,22 @@
 # rosbag folder
-rosbag_input_folder: /mnt/data_2/Rosbag/ljp/1015
+rosbag_input_folder: 
 
 # rosbag path
-rosbag_input_path_list: []
+rosbag_input_path_list: [
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_0.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_1.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_2.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_3.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_4.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_5.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_6.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_7.bag,
+  /mnt/data_2/Rosbag/ljp/1015/wudajsj_2021-10-15-15-29-23_8.bag,
+  ]
+  
 
 # rosbag path
-rosbag_output_path: /mnt/data_2/Rosbag/parking/guoruan_2021-10-15-15-15-13_0.bag
+rosbag_output_path: /mnt/data_2/Rosbag/parking/wudajisuanjixueyuan_2021-10-15-15-29-23_0.bag
 
 # progress debug
 debug: False
