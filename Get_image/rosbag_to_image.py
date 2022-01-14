@@ -5,7 +5,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2022-01-14 15:29:42
+LastEditTime: 2022-01-14 17:08:26
 '''
 import os
 import cv2
@@ -14,6 +14,8 @@ import shutil
 import rosbag
 import argparse
 from cv_bridge import CvBridge
+
+os.chdir('Get_image')
 
 
 def get_image(rosbag_config, rosbag_path, topic_dict, topic_image_output_count_dict):
@@ -85,7 +87,7 @@ def main(rosbag_config):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='rosbag_to_image.py')
-    parser.add_argument('--config', '--c', dest='config', default=r'/home/leidi/hy_program/Rosbag_clean/Get_image/config/default.yaml',
+    parser.add_argument('--config', '--c', dest='config', default=r'config/default.yaml',
                         type=str, help='rosbag config file path')
     opt = parser.parse_args()
     

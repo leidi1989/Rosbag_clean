@@ -4,14 +4,16 @@ Version:
 Author: Leidi
 Date: 2022-01-14 15:24:17
 LastEditors: Leidi
-LastEditTime: 2022-01-14 16:45:27
+LastEditTime: 2022-01-14 17:08:00
 '''
 import os
 import yaml
 import argparse
 from rosbag import Bag
 
- 
+os.chdir('Merge_rosbag')
+
+
 def main(rosbag_config):
     """[rosbag融合]
 
@@ -52,7 +54,7 @@ def main(rosbag_config):
                     output_bag.write(topic, message, time)
                     included_count += 1
                     print('{} add topic: {:>60}, time: {:>30}.'
-                          .format(rosbag_output_path, topic, time))
+                          .format(rosbag_output_path, topic, str(time)))
             total_msg_count += included_count
             
     print('\nMerge rosbag end:')
@@ -66,7 +68,7 @@ def main(rosbag_config):
  
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='merge_rosbag.py')
-    parser.add_argument('--config', '--c', dest='config', default=r'/home/leidi/hy_program/Rosbag_clean/Merge_rosbag/config/default.yaml',
+    parser.add_argument('--config', '--c', dest='config', default=r'config/default.yaml',
                         type=str, help='rosbag config file path')
     opt = parser.parse_args()
     
