@@ -1,13 +1,11 @@
 # rosbag folder
-rosbag_input_folder:
+rosbag_input_folder: /mnt/data_2/Rosbag/ljp/1015
 
 # rosbag path
-rosbag_input_path_list: ["/mnt/data_2/Rosbag/ljp/1108/chu1_2021-11-08-10-56-15_0.bag",
-                         "/mnt/data_2/Rosbag/ljp/1108/chu1_2021-11-08-10-56-15_1.bag",
-                         "/mnt/data_2/Rosbag/ljp/1108/chu1_2021-11-08-10-56-15_2.bag"]
+rosbag_input_path_list: []
 
 # rosbag path
-rosbag_output_path: /mnt/data_2/Rosbag/test.bag
+rosbag_output_path: /mnt/data_2/Rosbag/parking/guoruan_2021-10-15-15-15-13_0.bag
 
 # progress debug
 debug: False

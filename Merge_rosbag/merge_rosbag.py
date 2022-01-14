@@ -5,7 +5,7 @@ Version:
 Author: Leidi
 Date: 2022-01-14 15:24:17
 LastEditors: Leidi
-LastEditTime: 2022-01-14 17:13:28
+LastEditTime: 2022-01-14 17:34:22
 '''
 import os
 import yaml
@@ -27,12 +27,13 @@ def main(rosbag_config):
         rosbag_input_folder = rosbag_config['rosbag_input_folder']
         for n in os.listdir(rosbag_input_folder):
             rosbag_input_folder_list.append(os.path.join(rosbag_config['rosbag_input_folder'], n))
-            
+        rosbag_input_folder_list = rosbag_input_folder_list.sort()
     rosbag_input_path_list = []
     if rosbag_config['rosbag_input_path_list'] is not None:
         for n in rosbag_config['rosbag_input_path_list']:
             rosbag_input_path_list.append(n)
-            
+        rosbag_input_path_list.sort()
+        
     total_rosbag_input_list = rosbag_input_folder_list + rosbag_input_path_list
     
     if 0 == len(total_rosbag_input_list):
