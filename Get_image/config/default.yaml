@@ -2,10 +2,10 @@
 rosbag_path: 
 
 # rosbag folder
-rosbag_folder: /mnt/data_1/Data/rosbag/qunguang/20211220
+rosbag_folder: /media/leidi/vision/ljp/1229/bag
 
 # image output folder
-image_output_folder: /mnt/data_1/Data/rosbag/qunguang/20211220_image_20211223
+image_output_folder: /media/leidi/vision/ljp/1229/bag_image_20220106_2
 
 # every fps collect image
 fps: 15

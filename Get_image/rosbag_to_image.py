@@ -5,7 +5,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2021-12-23 11:35:37
+LastEditTime: 2022-01-14 15:29:42
 '''
 import os
 import cv2
@@ -61,12 +61,20 @@ def main(rosbag_config):
     if rosbag_config['rosbag_folder'] == None and rosbag_config['rosbag_path'] != None:
         rosbag_path = rosbag_config['rosbag_path']
         topic_dict = {x:0 for x in rosbag_config['rosbag_topic']}
-        get_image(rosbag_config, rosbag_path, topic_dict, topic_image_output_count_dict)
+        try:
+            get_image(rosbag_config, rosbag_path, topic_dict, topic_image_output_count_dict)
+        except:
+            print('Bag erro: {}'.format(rosbag_path))
     else:
         for filename in os.listdir(rosbag_config['rosbag_folder']):
             rosbag_path = os.path.join(rosbag_config['rosbag_folder'], filename)
+            print('Start get images in: {}'.format(rosbag_path))
             topic_dict = {x:0 for x in rosbag_config['rosbag_topic']}
-            get_image(rosbag_config, rosbag_path, topic_dict, topic_image_output_count_dict)
+            try:
+                get_image(rosbag_config, rosbag_path, topic_dict, topic_image_output_count_dict)
+            except:
+                print('Bag erro: {}'.format(rosbag_path))
+                continue
             
     print('\nTotal topic message create image:')
     for key in rosbag_config['rosbag_topic']:
