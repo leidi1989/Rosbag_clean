@@ -2,25 +2,24 @@
 rosbag_path: 
 
 # rosbag folder
-rosbag_folder: /media/leidi/vision/ljp/1229/bag
+rosbag_folder: /media/leidi/leidi1/dataset/20220118/cyc_bag
 
 # image output folder
-image_output_folder: /media/leidi/vision/ljp/1229/bag_image_20220106_2
+image_output_folder: /mnt/data_1/Dataset/Autopilot_annotation_source_data/chuangyicheng_parking/chuangyicheng_parking_20220118
 
 # every fps collect image
 fps: 15
 
 # topic
-rosbag_topic:
-  [
-    /cam_front_center/csi_cam/image_raw/compressed,
-    /cam_front_left/csi_cam/image_raw/compressed,
-    /cam_front_right/csi_cam/image_raw/compressed,
-    /cam_left_front/csi_cam/image_raw/compressed,
-    /cam_right_front/csi_cam/image_raw/compressed,
-    /cam_left_back/csi_cam/image_raw/compressed,
-    /cam_right_back/csi_cam/image_raw/compressed,
-    /cam_back/csi_cam/image_raw/compressed,
+rosbag_topic: [
+    # /cam_front_center/csi_cam/image_raw/compressed,
+    # /cam_front_left/csi_cam/image_raw/compressed,
+    # /cam_front_right/csi_cam/image_raw/compressed,
+    # /cam_left_front/csi_cam/image_raw/compressed,
+    # /cam_right_front/csi_cam/image_raw/compressed,
+    # /cam_left_back/csi_cam/image_raw/compressed,
+    # /cam_right_back/csi_cam/image_raw/compressed,
+    # /cam_back/csi_cam/image_raw/compressed,
     /cam_front_fish/csi_cam/image_raw/compressed,
     /cam_left_fish/csi_cam/image_raw/compressed,
     /cam_right_fish/csi_cam/image_raw/compressed,

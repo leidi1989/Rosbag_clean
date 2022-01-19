@@ -1,13 +1,16 @@
 # rosbag folder
-rosbag_input_folder: /mnt/data_2/Rosbag/ljp/1209
+rosbag_input_folder: 
 
 # rosbag path
 rosbag_input_path_list: [
-  
-  ]
+  /mnt/data_2/Rosbag/ljp/1229_gaojia/dongfenggaojia1_2021-12-29-18-42-24.bag,
+  /mnt/data_2/Rosbag/ljp/1229_gaojia/dongfenggaojia2_2021-12-29-18-54-08.bag,
+  /mnt/data_2/Rosbag/ljp/1229_gaojia/dongfenggaojia3_2021-12-29-19-04-54.bag,
+  /mnt/data_2/Rosbag/ljp/1229_gaojia/dongfenggaojia4_2021-12-29-19-15-47.bag
+    ]
 
 # rosbag path
-rosbag_output_path: /mnt/data_2/Rosbag/qunguang1_2_2021-12-09-11-01-17_0.bag
+rosbag_output_path: /mnt/data_2/Rosbag/dongfenggaojia_urban_2021-12-29-18-42-24_0.bag
 
 # progress debug
 debug: False

@@ -6,7 +6,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2022-01-14 17:15:41
+LastEditTime: 2022-01-19 14:05:38
 '''
 import os
 import cv2
@@ -15,8 +15,6 @@ import shutil
 import rosbag
 import argparse
 from cv_bridge import CvBridge
-
-os.chdir('Get_image')
 
 
 def get_image(rosbag_config, rosbag_path, topic_dict, topic_image_output_count_dict):
