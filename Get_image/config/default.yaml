@@ -1,11 +1,11 @@
 # rosbag path
-rosbag_path: /mnt/data_2/Rosbag/parking/huazhongzhigu_parking/huazhongzhigu_parking_fish_2022-01-18_0.bag
+rosbag_path: /mnt/data_2/Rosbag/parking/wudazhuoer_parking/wudazhuoer_parking_fish_zhuoer-2021-12-27-17-03-46.bag
 
 # rosbag folder
 rosbag_folder: 
 
 # image output folder
-image_output_folder: /mnt/data_1/Dataset/Autopilot_annotation_source_data/huazhongzhigu_parking/huazhongzhigu_parking_fish_2022-01-18_0
+image_output_folder: /mnt/data_2/Rosbag/parking/wudazhuoer_parking/wudazhuoer_parking_fish_zhuoer-2021-12-27-17-03-46
 
 # every fps collect image
 fps: 15
