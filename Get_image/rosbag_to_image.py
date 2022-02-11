@@ -6,7 +6,7 @@ Version:
 Author: Leidi
 Date: 2021-12-22 18:21:36
 LastEditors: Leidi
-LastEditTime: 2022-01-19 14:05:38
+LastEditTime: 2022-02-11 09:25:29
 '''
 import os
 import cv2
@@ -86,7 +86,7 @@ def main(rosbag_config):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='rosbag_to_image.py')
-    parser.add_argument('--config', '--c', dest='config', default=r'config/default.yaml',
+    parser.add_argument('--config', '--c', dest='config', default=r'Get_image/config/default.yaml',
                         type=str, help='rosbag config file path')
     opt = parser.parse_args()
     

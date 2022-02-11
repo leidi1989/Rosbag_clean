@@ -1,11 +1,11 @@
 # rosbag path
-rosbag_path: 
+rosbag_path: /mnt/data_2/Rosbag/parking/huazhongzhigu_parking/huazhongzhigu_parking_fish_2022-01-18_0.bag
 
 # rosbag folder
-rosbag_folder: /media/leidi/leidi1/dataset/20220118/cyc_bag
+rosbag_folder: 
 
 # image output folder
-image_output_folder: /mnt/data_1/Dataset/Autopilot_annotation_source_data/chuangyicheng_parking/chuangyicheng_parking_20220118
+image_output_folder: /mnt/data_1/Dataset/Autopilot_annotation_source_data/huazhongzhigu_parking/huazhongzhigu_parking_fish_2022-01-18_0
 
 # every fps collect image
 fps: 15
@@ -23,7 +23,7 @@ rosbag_topic: [
     /cam_front_fish/csi_cam/image_raw/compressed,
     /cam_left_fish/csi_cam/image_raw/compressed,
     /cam_right_fish/csi_cam/image_raw/compressed,
-    /cam_back_fish/csi_cam/image_raw/compressed,
+    /cam_back_fish/csi_cam/image_raw/compressed
   ]
 
 # progress debug
