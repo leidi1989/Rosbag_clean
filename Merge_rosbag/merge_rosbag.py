@@ -1,12 +1,4 @@
 #!/usr/bin/env python
-'''
-Description: 
-Version: 
-Author: Leidi
-Date: 2022-01-14 15:24:17
-LastEditors: Leidi
-LastEditTime: 2022-01-14 17:48:28
-'''
 import os
 import yaml
 import argparse
@@ -16,12 +8,7 @@ os.chdir('Merge_rosbag')
 
 
 def main(rosbag_config):
-    """[rosbag融合]
-
-    Args:
-        rosbag_config (dict): [rosbag融合信息字典]
-    """
-    
+  
     rosbag_input_folder_list = []
     file_name_list_1 = []
     if rosbag_config['rosbag_input_folder'] is not None and os.path.exists(rosbag_config['rosbag_input_folder']):

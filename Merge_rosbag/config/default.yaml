@@ -1,13 +1,11 @@
 # rosbag folder
-rosbag_input_folder: /mnt/data_2/Rosbag/parking/wudazhuoer_parking/zhuoer_20211018
+rosbag_input_folder: /home/leidi/Desktop/lantu_6cam_val_20220801/cam_0801/lantu_6cam
 
 # rosbag path
-rosbag_input_path_list: [
-
-]
+rosbag_input_path_list: []
 
 # rosbag path
-rosbag_output_path: /mnt/data_2/Rosbag/wudazhuoerdiku_2021-10-18-19-56-43_0
+rosbag_output_path: /home/leidi/Desktop/lantu_6cam_val_20220801/cam_0801/lantu_6cam_val_20220801.bag
 
 # progress debug
 debug: False

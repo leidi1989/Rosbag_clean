@@ -1,29 +1,38 @@
 # rosbag path
-rosbag_path: /mnt/data_2/Rosbag/parking/wudazhuoer_parking/wudazhuoer_parking_fish_zhuoer-2021-12-27-17-03-46.bag
+rosbag_path: /mnt/data_2/Rosbag/val_bag/hq1_js2df_8cam_with_location_20220615.bag
 
 # rosbag folder
-rosbag_folder: 
+rosbag_folder:
 
 # image output folder
-image_output_folder: /mnt/data_2/Rosbag/parking/wudazhuoer_parking/wudazhuoer_parking_fish_zhuoer-2021-12-27-17-03-46
+image_output_folder: /mnt/data_2/Rosbag/val_bag/hq1_js2df_8cam_with_location_20220615_20220715
 
 # every fps collect image
-fps: 15
+fps: 1
 
 # topic
 rosbag_topic: [
-    # /cam_front_center/csi_cam/image_raw/compressed,
+    # /cross_view_input_net_image/compressed
+    /cam_back/csi_cam/image_raw/compressed,
+    /cam_front_center/csi_cam/image_raw/compressed,
     # /cam_front_left/csi_cam/image_raw/compressed,
     # /cam_front_right/csi_cam/image_raw/compressed,
-    # /cam_left_front/csi_cam/image_raw/compressed,
-    # /cam_right_front/csi_cam/image_raw/compressed,
-    # /cam_left_back/csi_cam/image_raw/compressed,
-    # /cam_right_back/csi_cam/image_raw/compressed,
-    # /cam_back/csi_cam/image_raw/compressed,
-    /cam_front_fish/csi_cam/image_raw/compressed,
-    /cam_left_fish/csi_cam/image_raw/compressed,
-    /cam_right_fish/csi_cam/image_raw/compressed,
-    /cam_back_fish/csi_cam/image_raw/compressed
+    /cam_left_back/csi_cam/image_raw/compressed,
+    /cam_left_front/csi_cam/image_raw/compressed,
+    /cam_right_back/csi_cam/image_raw/compressed,
+    /cam_right_front/csi_cam/image_raw/compressed,
+    # /cam_front_fish/csi_cam/image_raw/compressed,
+    # /cam_left_fish/csi_cam/image_raw/compressed,
+    # /cam_right_fish/csi_cam/image_raw/compressed,
+    # /cam_back_fish/csi_cam/image_raw/compressed
+    # /back,
+    # /depthcamera,
+    # /front,
+    # /left_back,
+    # /left_front,
+    # /right_back,
+    # /right_front,
+    # /segmentation,
   ]
 
 # progress debug
